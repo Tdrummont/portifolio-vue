@@ -1,7 +1,7 @@
 <template>
     <v-tooltip :text="texto" location="top">
         <template v-slot:activator="{ props }">
-            <v-img  :src="imagem" v-bind="props" cover></v-img>
+            <v-img  max-width="200px!important"  :src="imagem" v-bind="props" cover></v-img>
         </template>
     </v-tooltip>
 </template>

@@ -1,3 +1,4 @@
+<!--suppress CssInvalidPropertyValue -->
 <template>
   <v-app>
       <NavBar />
@@ -35,7 +36,7 @@
                   v-model="slider"
                   color="yellow"
                   max="50"
-                  min="5"
+                  min="10"
                   step="1"
                 ></v-slider>
                 </div>
@@ -66,102 +67,146 @@
         </v-col>
         <div class="text-center mt-4">
           <h2>What I Do</h2>
-          <div style="width:120px; margin: 0 auto">
-            <v-slider v-model="slider2" color="yellow" label=""></v-slider>
-          </div>
         </div>
-        <v-row class="padd" id="portifolio">
-              <v-col cols="3">
+        <div class="align-content-right">
+          <v-row class="padd" id="portifolio">
+              <v-col cols="12" md="3">
                 <div class="child">
                   <v-btn icon="mdi-youtube" @click="abrirYoutube" color="#FBDF7E" class="text-black"></v-btn>
                   <h3 class="ml-3 mt-4">Youtube channel</h3>
                   <p class="text-grey ml-3 mt-4 text-caption">
-                    Musician, composer.
-                    Acting in music for 19 years,<br />
-                    self-taught, I learned to play the guitar with inverted strings
-                    Rhythm has also always been present in my life  and with that.<br />.</p>
+                    On youtube I show my work with music where I have my copyright compositions.</p>
                 </div>
               </v-col>
-              <v-col cols="3">
+              <v-col cols="12" md="3">
                 <div class="child">
                   <v-btn icon="mdi-github" @click="abrirGithub" color="#FBDF7E" class="text-black"></v-btn>
                   <h3 class="ml-3 mt-4">GitHub</h3>
                   <p class="text-grey ml-3 mt-4 text-caption">
-                    My GitHub profile
+                    My github profile where I upload my codes and projects.
                     .</p>
                 </div>
               </v-col>
-              <v-col cols="3">
+              <v-col cols="12" md="3">
                 <div class="child">
                   <v-btn icon="mdi-linkedin" @click="abrirLinkedIn" color="#FBDF7E" class="text-black"></v-btn>
                   <h3 class="ml-3 mt-4">Social Network</h3>
                   <p class="text-grey ml-3 mt-4 text-caption">
-                    My LinkedIn profile
+                    My professional profile on linkedIn, where I have my certifications and work history
                     .</p>
                 </div>
               </v-col>
-              <v-col cols="3">
+              <v-col cols="12" md="3">
                 <div class="child">
                   <v-btn  icon="mdi-instagram"  @click="abrirInsta" color="#FBDF7E" class="text-black"></v-btn>
                   <h3 class="ml-3 mt-4">Photography</h3>
                   <p class="text-grey ml-3 mt-4 text-caption">
-                    I add my videos and photos on insta @tdrummont
+                    My instagram if you want to follow my day closely.
                     .</p>
                 </div>
               </v-col>
         </v-row>
+
+        </div>
         <v-divider></v-divider>
         <v-col cols="12" sm="12" id="services">
           <div class="d-flex justify-center mt-12">
-            <v-btn color="#FBDF7E" class="mr-2">ALL</v-btn>
-            <v-btn class="mr-2" variant="tonal">Web Design</v-btn>
-            <v-btn class="mr-2" variant="tonal">FrontEnd</v-btn>
-            <v-btn class="mr-2" variant="tonal">Photography</v-btn>
+            <v-btn color="#FBDF7E" class="mr-2">My Skills</v-btn>
           </div>
         </v-col>
-        <!-- <v-col cols="12" class="imgHover">
-          <v-row class="fill-height" align="center" justify="center">
-            <template v-for="(item, i) in items" :key="i">
-              <v-col cols="12" md="3">
-                  <v-card :elevation="isHovering ? 12: 2" :class="{'on-Hover' :isHoverging}" v-bind="props"></v-card>
-                  <v-img :src="item.img" height="300px" cover></v-img>
-                  <TooltipTalita
-                      :imagem="item.img"
-                      :texto="item.descricao" />
-              </v-col>
-            </template>
-          </v-row>
-        </v-col> -->
-
-        <v-row class="d-flex justify-space-around mt-12">
-          <v-col cols="3"  style="max-width: 200px!important" v-for="(item, i) in items" :key="i">
+        <v-col
+          cols="12"
+          id="page"
+          >
+          <v-row class="d-flex justify-space-around mt-12">
+          <v-col cols="3" md="3" class="d-flex justify-space-around mt-12" sm="4"  v-for="(item, i) in items" :key="i">
             <TooltipTalita
               :imagem="item.img"
               :texto="item.descricao" />
           </v-col>
         </v-row>
+      </v-col>
+      <v-divider></v-divider>
+        <v-col cols="12" sm="12" id="services">
+          <div class="d-flex justify-center mt-12">
+            <v-btn color="#FBDF7E" class="mr-2">Photography</v-btn>
+          </div>
+        </v-col>
         <v-col
             cols="12"
             id="page"
+            class="d-flex justify-space-around mt-12"
             >
           <div class="pre">
             <v-row>
-            <v-col cols="12" class="d-flex justify-space-around mt-12" sm="4">
+            <v-col cols="12" md="12" class="d-flex justify-space-around mt-6" sm="4">
               <v-card
                   class="mw-auto"
-                  max-width="346"
+                  max-width="230"
                   height="">
                 <v-img
                   src="k.png"
-                  height="250px"
+                  height="230px"
                   cover
                 ></v-img>
-                <v-card-title>We provide you the best</v-card-title>
                 <v-card-subtitle>
-                  By @Tdrummont| 7 dez 2022
+                  By @Tdrummont | 7 dez 2022
                 </v-card-subtitle>
                 <v-card-text>
-                  SAMPA-SKY
+                  SAMPA-SKY<br/>
+                  "Come Out of Things Unsaid"
+                </v-card-text>
+              </v-card>
+              <v-card
+                  class="mw-auto"
+                  max-width="230"
+                  height="">
+                <v-img
+                  src="church.png"
+                  height="230px"
+                  cover
+                ></v-img>
+                <v-card-subtitle>
+                  By @Tdrummont | 8 dez 2022
+                </v-card-subtitle>
+                <v-card-text>
+                  São Paulo <br/>
+                  Paróquia Nossa Senhora da Consolação
+                </v-card-text>
+              </v-card>
+              <v-card
+                  class="mw-auto"
+                  max-width="230"
+                  height="">
+                <v-img
+                  src="black.png"
+                  height="230px"
+                  cover
+                ></v-img>
+                <v-card-subtitle>
+                  By @Tdrummont | 7 dez 2022
+                </v-card-subtitle>
+                <v-card-text>
+                  SAMPA-SKY <br/>
+                  "Menos rotina, mais roteiros!"
+                </v-card-text>
+              </v-card>
+              <v-card
+                  class="mw-auto"
+                  max-width="230"
+                  height="">
+                <v-img
+                  src="blue.png"
+                  height="229px"
+                  cover
+                ></v-img>
+                <v-card-subtitle>
+                  By @Tdrummont | 7 dez 2022
+                </v-card-subtitle>
+                <v-card-text>
+                  SAMPA-SKY<br/>
+                  Let the sky fall
+                  When it crumbles
                 </v-card-text>
               </v-card>
             </v-col>
@@ -207,9 +252,8 @@ export default defineComponent({
 },
   data(){
     return {
-      slider: 50,
-      font: "font-size: 50px",
-      slider2: 0,
+      slider: 20,
+      font: "font-size: 20px",
       items: [
         {
           img:"css.png",
@@ -274,10 +318,10 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.v-container{
-  padding: 16px 0;
+/*.v-container{*/
+/*  padding: 16px 0;*/
 
-}
+/*}*/
 .head {
   position: relative;
   text-align: center;
@@ -316,34 +360,38 @@ export default defineComponent({
   background-color: #FBDF7E;
   border-radius: 50% 50% 50% 50% / 60% 60% 40% 0;
 }
-.first {
-  width: 100%;
-  height: 280px;
-  text-align: center;
-  padding: 2rem 2rem;
-}
+/*.first {*/
+/*  width: 100%;*/
+/*  height: 280px;*/
+/*  text-align: center;*/
+/*  padding: 2rem 2rem;*/
+/*}*/
 .child {
-  display: incline-block;
   padding: 2rem 1rem;
   vertical-align: middle;
   text-align: center;
   margin-right: 8px;
 }
-.imgHover{
-  padding: 0 200px;
+
+.child {
+  display: incline-block;
 }
+
+/*.imgHover{*/
+/*  padding: 0 200px;*/
+/*}*/
 .pre {
   width: 100%;
-  height: 380px;
+  height: 370px;
   text-align: center;
   padding: 0 200px;
   background-color: #f5f5f5;
 }
-.hire{
-  width: 100%;
-  height: 200px;
-  padding: 0 200px;
-  background-color: #e9e9e9;
-  margin-top: -24px;
-}
+/*.hire{*/
+/*  width: 100%;*/
+/*  height: 200px;*/
+/*  padding: 0 200px;*/
+/*  background-color: #e9e9e9;*/
+/*  margin-top: -24px;*/
+/*}*/
 </style>
